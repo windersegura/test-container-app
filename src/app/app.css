@@ -1,0 +1,51 @@
+:host {
+  display: block;
+  max-width: 480px;
+  margin: 3rem auto;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+input[type='text'],
+input:not([type]) {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #256aeb;
+  color: #fff;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0.4rem 0;
+}
+
+li.done label {
+  text-decoration: line-through;
+  color: #999;
+}
+
+li.empty {
+  color: #999;
+}

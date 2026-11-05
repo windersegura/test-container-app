@@ -1,0 +1,19 @@
+<h1>Todo</h1>
+
+<form (ngSubmit)="addTask()">
+  <input [(ngModel)]="newTitle" name="newTitle" placeholder="New task..." autocomplete="off" />
+  <button type="submit">Add</button>
+</form>
+
+<ul>
+  @for (task of tasks(); track task.id) {
+    <li [class.done]="task.done">
+      <label>
+        <input type="checkbox" [checked]="task.done" (change)="toggleTask(task)" />
+        {{ task.title }}
+      </label>
+    </li>
+  } @empty {
+    <li class="empty">No tasks yet</li>
+  }
+</ul>
